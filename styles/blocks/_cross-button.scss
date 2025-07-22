@@ -1,0 +1,18 @@
+.cross-button {
+	@include reset-button;
+	@include square(40px);
+
+	position: fixed;
+	top: 1rem;
+	right: 1.25rem;
+
+	&::after {
+		@include abs-center;
+
+		content: '';
+		width: 68%;
+		height: 2px;
+		background-color: var(--color-light);
+		box-shadow: 0 -10px var(--color-light), 0 10px var(--color-light);
+	}
+}

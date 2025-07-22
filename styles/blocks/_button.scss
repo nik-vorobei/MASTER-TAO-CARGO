@@ -1,0 +1,17 @@
+.button {
+	@include flex-center(true);
+
+	height: var(--button-height);
+	padding-inline: 24px;
+	font-weight: 600;
+	color: var(--color-light);
+	background-color: var(--color-orange);
+	border: var(--border);
+	border-radius: var(--border-radius-big);
+
+	&--alt {
+		justify-content: space-between;
+		height: 68px;
+		padding-inline: 33px 17px;
+	}
+}

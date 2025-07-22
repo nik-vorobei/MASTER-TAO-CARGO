@@ -1,0 +1,44 @@
+.header {
+	padding-block: 25px;
+
+	@include mobile {
+		padding-block: 16px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include tablet {
+			position: relative;
+		}
+	}
+
+	&__logo {
+		width: 126px;
+		height: 35px;
+	}
+
+	&__menu {
+		@include tablet {
+			position: absolute;
+			top: 110%;
+			width: 90%;
+			display: flex;
+			justify-content: center;
+		}
+
+		&-list {
+			display: flex;
+			align-items: center;
+			column-gap: 43px;
+		}
+
+		&-link {
+			display: inline-flex;
+			align-items: center;
+			height: 48px;
+		}
+	}
+}

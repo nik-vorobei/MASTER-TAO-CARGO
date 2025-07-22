@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
@@ -9,5 +9,93 @@
 		<link rel="stylesheet" href="./styles/styles.css" />
 		<title>MASTER TAO CARGO</title>
 	</head>
-	<body></body>
+	<body>
+		<header class="header">
+			<div class="header__inner container">
+				<a href="/" class="header__logo logo">
+					<img
+						src="./images/logo.svg"
+						alt="MASTER TAO CARGO"
+						class="logo__image"
+						width="172"
+						height="48"
+						loading="lazy"
+					/>
+				</a>
+				<nav class="header__menu hidden-mobile">
+					<ul class="header__menu-list">
+						<li class="header__menu-item">
+							<a href="/" class="header__menu-link">Цены и сроки</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="/" class="header__menu-link">Услуги</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="/" class="header__menu-link">О компании</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="/" class="header__menu-link">Контакты</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="/" class="header__menu-link">Оформить груз</a>
+						</li>
+					</ul>
+				</nav>
+				<button class="header__button button hidden-mobile" type="button">
+					Оставить заявку
+				</button>
+				<button
+					class="header__burger-button burger-button visible-mobile"
+					type="button"
+					onclick="mobileOverlay.showModal()"
+				>
+					<span class="visually-hidden">Open navigation menu</span>
+				</button>
+			</div>
+		</header>
+
+		<dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+			<form class="mobile-overlay__close-button-wrapper" method="dialog">
+				<button class="mobile-overlay__close-button cross-button" type="submit">
+					<span class="visually-hidden">Close navigation menu</span>
+				</button>
+			</form>
+			<div class="mobile-overlay__body">
+				<ul class="mobile-overlay__list">
+					<li class="mobile-overlay__item">
+						<a href="/" class="mobile-overlay__link">Цены и сроки</a>
+					</li>
+					<li class="mobile-overlay__item">
+						<a href="/" class="mobile-overlay__link">Услуги</a>
+					</li>
+					<li class="mobile-overlay__item">
+						<a href="/" class="mobile-overlay__link">О компании</a>
+					</li>
+					<li class="mobile-overlay__item">
+						<a href="/" class="mobile-overlay__link">Контакты</a>
+					</li>
+					<li class="mobile-overlay__item">
+						<a href="/" class="mobile-overlay__link">Оформить груз</a>
+					</li>
+				</ul>
+				<button class="mobile-overlay__button button button--alt" type="button">
+					Оставить заявку
+					<span class="mobile-overlay__icon icon">
+						<svg
+							width="27"
+							height="27"
+							viewBox="0 0 27 27"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.421875 13.5C0.421875 6.27539 6.27539 0.421875 13.5 0.421875C20.7246 0.421875 26.5781 6.27539 26.5781 13.5C26.5781 20.7246 20.7246 26.5781 13.5 26.5781C6.27539 26.5781 0.421875 20.7246 0.421875 13.5ZM13.5 24.8906C19.7596 24.8906 24.8906 19.8229 24.8906 13.5C24.8906 7.24043 19.8229 2.10938 13.5 2.10938C7.24043 2.10938 2.10938 7.17715 2.10938 13.5C2.10938 19.7596 7.17715 24.8906 13.5 24.8906ZM14.1592 20.0127L20.2289 13.9482C20.4768 13.7004 20.4768 13.2996 20.2289 13.0518L14.1592 6.9873C13.9113 6.73945 13.5105 6.73945 13.2627 6.9873L12.8988 7.35117C12.651 7.59902 12.651 8.01035 12.9094 8.25293L17.4182 12.6035H7.38281C7.03477 12.6035 6.75 12.8883 6.75 13.2363V13.7637C6.75 14.1117 7.03477 14.3965 7.38281 14.3965H17.4182L12.9041 18.7471C12.651 18.9949 12.6457 19.401 12.8936 19.6488L13.2574 20.0127C13.5105 20.2605 13.9113 20.2605 14.1592 20.0127Z"
+								fill="#B26519"
+							/>
+						</svg>
+					</span>
+				</button>
+			</div>
+		</dialog>
+	</body>
 </html>

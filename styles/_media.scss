@@ -1,3 +1,6 @@
+$desktop-big-above: 1441px;
+$desktop-big: 1440px;
+
 $desktop-above: 1281px;
 $desktop: 1280px;
 
@@ -9,6 +12,18 @@ $mobile: 767px;
 
 $mobile-s-above: 481px;
 $mobile-s: 480px;
+
+@mixin desktop-big-above {
+	@media (min-width: $desktop-big-above) {
+		@content;
+	}
+}
+
+@mixin desktop-big {
+	@media (max-width: $desktop-big) {
+		@content;
+	}
+}
 
 @mixin desktop-above {
 	@media (min-width: $desktop-above) {

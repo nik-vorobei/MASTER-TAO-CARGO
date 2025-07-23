@@ -1,0 +1,19 @@
+section {
+	margin-inline: 50px;
+
+	@include desktop-big {
+		margin-inline: 25px;
+	}
+
+	@include desktop {
+		margin-inline: 0;
+	}
+
+	&--hidden {
+		overflow: hidden;
+	}
+
+	&--hidden-x {
+		overflow-x: hidden;
+	}
+}

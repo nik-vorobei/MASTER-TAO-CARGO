@@ -1,8 +1,8 @@
 .header {
 	padding-block: 25px;
 
-	@include mobile {
-		padding-block: 16px;
+	@include tablet {
+		padding-block: 15px;
 	}
 
 	&__inner {

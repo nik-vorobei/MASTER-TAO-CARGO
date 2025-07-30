@@ -1,0 +1,134 @@
+.calculation {
+	position: relative;
+	&__body {
+		padding: 70px 50px 40px;
+		background-color: var(--color-dark-alt);
+		width: 626px;
+		border-radius: var(--border-radius-medium);
+		margin-top: 80px;
+
+		@include mobile {
+			padding: 52px 30px 34px;
+			width: 100%;
+		}
+	}
+
+	&__step-wrapper {
+		position: absolute;
+		display: flex;
+		column-gap: 41px;
+		top: -4.5%;
+		font-weight: 700;
+		font-size: 24px;
+		text-transform: uppercase;
+
+		@include mobile;
+	}
+
+	&__step {
+		@include square(60px);
+		@include flex-center;
+
+		color: var(--color-gray);
+		background-color: var(--color-dark);
+		border: 2px solid var(--color-dark-alt);
+		border-radius: var(--border-radius-big);
+
+		&.is-current {
+			color: var(--color-light);
+			background-color: var(--color-accent);
+			border: 2px solid var(--color-accent);
+		}
+	}
+
+	&__form {
+		&-group {
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
+		}
+
+		&-item {
+			display: flex;
+			column-gap: 30px;
+
+			@include mobile {
+				flex-direction: column;
+				row-gap: 20px;
+			}
+		}
+
+		&-checkbox-wrapper {
+			display: flex;
+			flex-direction: column;
+			row-gap: 14px;
+			width: 248px;
+
+			@include mobile-above {
+				margin-top: 20px;
+			}
+		}
+
+		&-checkbox {
+			display: flex;
+			align-items: center;
+
+			&-control {
+				@include square(24px);
+				@include flex-center;
+
+				appearance: none;
+				background-color: var(--color-light);
+				border: 1px solid var(--color-dark);
+				border-radius: 4px;
+
+				&:checked::after {
+					content: '✔';
+				}
+			}
+
+			&-label {
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__button-wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		@include mobile-s {
+			flex-direction: column;
+			row-gap: 20px;
+		}
+	}
+
+	&__button {
+		width: 253px;
+
+		&--min {
+			width: 138px;
+
+			@include mobile-s {
+				width: 253px;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		left: 52%;
+		bottom: -15%;
+		width: 54.8%;
+		height: auto;
+
+		@include desktop {
+			width: 50%;
+			bottom: -8%;
+		}
+
+		@include tablet-big {
+			display: none;
+		}
+	}
+}

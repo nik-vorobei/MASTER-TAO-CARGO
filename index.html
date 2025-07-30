@@ -55,7 +55,7 @@
 		</header>
 
 		<main class="content">
-			<section class="section section--hidden">
+			<section class="section section--img section--hidden">
 				<div class="section__body">
 					<div class="hero">
 						<div class="hero__slider">
@@ -399,16 +399,17 @@
 					</div>
 				</div>
 			</section>
-			<section class="section">
+
+			<section class="section container">
 				<header class="section__header">
-					<h2 class="section__title">
-						Получить расчет стоимости доставки вашего груза
+					<h2 class="section__title section__title--width">
+						Получить расcчет стоимости доставки вашего груза
 					</h2>
 				</header>
 				<div class="section__body">
 					<div class="calculation">
 						<div class="calculation__body">
-							<div class="calculation__step-indicator">
+							<div class="calculation__step-wrapper">
 								<div class="calculation__step is-current">1</div>
 								<div class="calculation__step">2</div>
 								<div class="calculation__step">3</div>
@@ -470,24 +471,23 @@
 										</div>
 									</div>
 									<div class="calculation__form-item">
-										<div class="calculation__checkbox-wrapper">
-											<label class="calculation__checkbox">
+										<div class="calculation__form-checkbox-wrapper">
+											<label class="calculation__form-checkbox">
 												<input
 													type="checkbox"
-													class="calculation__checkbox-control"
+													class="calculation__form-checkbox-control"
 												/>
-												<span class="calculation__checkbox-emulator"></span>
-												<span class="calculation__checkbox-label"
+												<span class="calculation__form-checkbox-label"
 													>Страховка</span
 												>
 											</label>
-											<label class="calculation__checkbox is-active">
+											<label class="calculation__form-checkbox">
 												<input
 													type="checkbox"
-													class="calculation__checkbox-control"
+													class="calculation__form-checkbox-control"
+													checked
 												/>
-												<span class="calculation__checkbox-emulator"></span>
-												<span class="calculation__checkbox-label"
+												<span class="calculation__form-checkbox-label"
 													>Таможенное оформление</span
 												>
 											</label>
@@ -506,20 +506,23 @@
 										</div>
 									</div>
 									<div class="calculation__form-item">
-										<div class="calculation__field field">
-											<label class="field-label" for="photo"
-												>фотография.jpeg</label
-											>
-											<input
-												class="field__input"
-												type="file"
-												id="photo"
-												name="photo"
-												accept="image/*"
-												placeholder="Загрузить фото товара"
-											/>
+										<div class="calculation__field field field--alt">
+											<label class="field-label field-label--base" for="photo">
+												фотография.jpeg <br />
+												<span class="field-placeholder">
+													Загрузить фото товара
+												</span>
+												<input
+													class="field-control field-control--img"
+													type="file"
+													id="photo"
+													name="photo"
+													accept="image/*"
+												/>
+											</label>
+
 											<button
-												class="field__button"
+												class="field__button field__button--red"
 												type="button"
 												onclick="deletePhoto()"
 											>
@@ -545,9 +548,9 @@
 										</span>
 									</button>
 								</fieldset>
-								<fieldset class="calculation__form-group">
+								<fieldset class="calculation__form-group visually-hidden">
 									<div class="calculation__form-item">
-										<div class="calculation__field field">
+										<div class="calculation__field field field--alt">
 											<label for="name" class="field-label">Имя:</label>
 											<input
 												name="name"
@@ -582,21 +585,21 @@
 										</div>
 									</div>
 									<div class="calculation__form-item">
-										<div class="calculation__field field">
+										<div class="calculation__field field field--alt">
 											<label for="comment" class="field-label">
 												Комментарий:
 											</label>
 											<textarea
 												name="comment"
-												class="field-control field-control--textaria"
+												class="field-control field-control--textarea"
 												id="comment"
 												placeholder="Подробности о товаре, описание, количество"
 											></textarea>
 										</div>
 									</div>
-									<div class="calculation__buttton-wrapper">
+									<div class="calculation__button-wrapper">
 										<button
-											class="calculation__button button button--transparent"
+											class="calculation__button calculation__button--min button button--transparent"
 										>
 											Назад
 										</button>
@@ -621,6 +624,14 @@
 								</fieldset>
 							</form>
 						</div>
+						<img
+							src="./images/calculation/business-man.webp"
+							alt=""
+							class="calculation__image"
+							width="625"
+							height="917"
+							loading="lazy"
+						/>
 					</div>
 				</div>
 			</section>
@@ -628,7 +639,7 @@
 
 		<script>
 			function deletePhoto() {
-				const input = document.getElementById('productPhoto')
+				const input = document.getElementById('photo')
 				input.value = '' // Сброс выбранного файла
 			}
 		</script>

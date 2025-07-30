@@ -1,12 +1,18 @@
-section {
-	margin-inline: 50px;
+.section {
+	&--img {
+		margin-inline: 50px;
 
-	@include desktop-big {
-		margin-inline: 25px;
+		@include desktop-big {
+			margin-inline: 25px;
+		}
+
+		@include desktop {
+			margin-inline: 0;
+		}
 	}
 
-	@include desktop {
-		margin-inline: 0;
+	&--bg {
+		background-color: var(--color-dark-alt);
 	}
 
 	&--hidden {
@@ -15,5 +21,63 @@ section {
 
 	&--hidden-x {
 		overflow-x: hidden;
+	}
+
+	&:not(:first-child) {
+		padding-block: 100px;
+
+		@include desktop {
+			padding-block: 50px;
+		}
+	}
+
+	&__header {
+		margin-bottom: 50px;
+
+		@include mobile-s {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__title {
+		position: relative;
+		text-transform: uppercase;
+
+		@include mobile-s {
+			text-align: center;
+		}
+
+		&::after {
+			position: absolute;
+
+			content: '';
+			width: 85px;
+			height: 2px;
+			top: 70%;
+			background-color: var(--color-accent);
+
+			@include mobile-s-above {
+				margin-inline: 17px;
+			}
+
+			@include mobile-s {
+				top: 115%;
+				left: 50%;
+				translate: -50%;
+			}
+		}
+
+		&--width {
+			width: 626px;
+
+			@include mobile {
+				width: 100%;
+			}
+
+			@include mobile-s {
+				width: 335px;
+			}
+		}
 	}
 }

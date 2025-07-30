@@ -1,0 +1,70 @@
+.field {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	row-gap: 6px;
+	width: 248px;
+
+	@include mobile {
+		width: 100%;
+	}
+
+	&--alt {
+		width: 100%;
+	}
+
+	&-label {
+		font-weight: 600;
+
+		&--base {
+			font-weight: 400;
+		}
+	}
+
+	&-control {
+		position: relative;
+		height: var(--input-height);
+		padding-inline: 20px;
+		border-radius: var(--border-radius);
+		border: none;
+
+		&::placeholder {
+			color: var(--color-gray);
+		}
+
+		&--textarea {
+			padding-block: 18px;
+			height: 147px;
+			resize: none;
+		}
+
+		&--img {
+			display: none;
+		}
+	}
+
+	&-placeholder {
+		@include flex-center(true);
+		pointer-events: none;
+		border: 1px dashed rgba(255, 255, 255, 0.26);
+		border-radius: var(--border-radius);
+		width: 100%;
+		height: 43px;
+		margin-top: 18px;
+	}
+
+	&__button {
+		position: absolute;
+		text-decoration: underline;
+		color: var(--color-orange);
+		width: max-content;
+		padding-inline: 0;
+		background-color: transparent;
+		border: none;
+		right: 0;
+
+		&--red {
+			color: var(--color-red);
+		}
+	}
+}

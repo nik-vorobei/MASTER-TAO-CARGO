@@ -1,0 +1,54 @@
+.our-advantages {
+	@include mobile-s {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 22px;
+	}
+
+	&__body {
+		display: flex;
+		column-gap: 30px;
+
+		@include mobile-s-above {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		@include mobile-s {
+			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
+			scrollbar-width: none;
+		}
+	}
+
+	&__icon-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 32px;
+		width: 262px;
+		margin-top: 48px;
+		text-align: center;
+
+		@include mobile-s {
+			margin-top: 45px;
+			min-width: 100%;
+			scroll-snap-align: center;
+		}
+	}
+
+	&__icon {
+		@include flex-center;
+		@include square(93px);
+
+		outline: var(--border-blue);
+		outline-offset: 10px;
+		border-radius: var(--border-radius-big);
+		background-color: var(--color-accent);
+	}
+
+	&__description {
+		width: 262px;
+	}
+}

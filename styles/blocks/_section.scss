@@ -1,18 +1,17 @@
 .section {
-	&--img {
-		margin-inline: 50px;
+	margin-inline: 50px;
 
-		@include desktop-big {
-			margin-inline: 25px;
-		}
+	@include desktop-big {
+		margin-inline: 25px;
+	}
 
-		@include desktop {
-			margin-inline: 0;
-		}
+	@include desktop {
+		margin-inline: 0;
 	}
 
 	&--bg {
 		background-color: var(--color-dark-alt);
+		border-radius: var(--border-radius-medium);
 	}
 
 	&--hidden {
@@ -46,25 +45,22 @@
 
 		@include mobile-s {
 			text-align: center;
+			padding-inline: 20px;
 		}
 
-		&::after {
-			position: absolute;
+		&--base {
+			display: flex;
+			justify-content: center;
 
-			content: '';
-			width: 85px;
-			height: 2px;
-			top: 70%;
-			background-color: var(--color-accent);
+			&::after {
+				position: absolute;
 
-			@include mobile-s-above {
-				margin-inline: 17px;
-			}
-
-			@include mobile-s {
-				top: 115%;
+				content: '';
+				width: 85px;
+				height: 2px;
+				top: 145%;
 				left: 50%;
-				translate: -50%;
+				translate: -50% 0;
 			}
 		}
 
@@ -77,6 +73,37 @@
 
 			@include mobile-s {
 				width: 335px;
+			}
+
+			&::after {
+				position: absolute;
+
+				content: '';
+				width: 85px;
+				height: 2px;
+				top: 70%;
+
+				@include mobile-s-above {
+					margin-inline: 17px;
+				}
+
+				@include mobile-s {
+					top: 115%;
+					left: 50%;
+					translate: -50%;
+				}
+			}
+		}
+
+		&--after-bg-accent {
+			&::after {
+				background-color: var(--color-accent);
+			}
+		}
+
+		&--after-bg-orange {
+			&::after {
+				background-color: var(--color-orange);
 			}
 		}
 	}

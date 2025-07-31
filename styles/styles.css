@@ -561,7 +561,11 @@ h4,
 }
 .section--bg {
   background-color: var(--color-dark-alt);
-  border-radius: var(--border-radius-medium);
+}
+@media (min-width: 768px) {
+  .section--bg {
+    border-radius: var(--border-radius-medium);
+  }
 }
 .section--hidden {
   overflow: hidden;

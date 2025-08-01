@@ -1,0 +1,75 @@
+.variants {
+	position: relative;
+
+	&__slider {
+		@include tablet {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__list {
+		display: flex;
+		column-gap: 30px;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+		margin-top: 56px;
+
+		@include tablet {
+			width: 756px;
+		}
+
+		@include mobile {
+			width: 335px;
+		}
+	}
+
+	&__item {
+		min-width: 360px;
+		scroll-snap-align: start;
+
+		@include mobile {
+			min-width: 335px;
+		}
+	}
+
+	&__button-arrow {
+		@include flex-center;
+		@include square(46px);
+
+		position: absolute;
+		color: var(--color-light);
+		background-color: transparent;
+		border: none;
+		z-index: 2;
+		top: 50%;
+		translate: 0 -50%;
+
+		@include desktop {
+			@include visually-hidden;
+		}
+
+		&--left {
+			right: 105%;
+
+			@include desktop-big {
+				right: 100%;
+			}
+		}
+
+		&--right {
+			left: 105%;
+
+			@include desktop-big {
+				left: 100%;
+			}
+		}
+	}
+
+	&__pagination {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+}

@@ -27,6 +27,7 @@
 			width: 90%;
 			display: flex;
 			justify-content: center;
+			z-index: 2;
 		}
 
 		&-list {
@@ -40,5 +41,9 @@
 			align-items: center;
 			height: 48px;
 		}
+	}
+
+	&__button {
+		width: 171px;
 	}
 }

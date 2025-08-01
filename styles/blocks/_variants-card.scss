@@ -1,0 +1,65 @@
+.variants-card {
+	max-width: 100%;
+	border-radius: var(--border-radius-medium);
+	background-color: var(--color-dark-alt);
+
+	&__header {
+		img {
+			border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 27px 20px 27px;
+	}
+
+	&__title {
+		margin-bottom: 11px;
+	}
+
+	&__info-wrapper {
+		display: flex;
+		column-gap: 32px;
+	}
+
+	&__info {
+		display: flex;
+		column-gap: 8px;
+
+		svg {
+			color: var(--color-accent);
+		}
+	}
+
+	&__price {
+		margin-block: 13px 18px;
+		font-weight: 400;
+
+		span {
+			&:nth-child(1) {
+				color: var(--color-gray);
+			}
+
+			&:nth-child(2) {
+				font-weight: 700;
+				font-size: 45px;
+			}
+		}
+	}
+
+	&__button-wrapper {
+		display: flex;
+		column-gap: 14px;
+	}
+
+	&__button {
+		width: 153px;
+
+		@include mobile {
+			width: 138px;
+		}
+	}
+}

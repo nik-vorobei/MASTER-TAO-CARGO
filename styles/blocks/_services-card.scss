@@ -1,0 +1,32 @@
+.services-card {
+	position: relative;
+	border-radius: var(--border-radius-medium);
+	display: flex;
+
+	&__image {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		border-radius: var(--border-radius-medium);
+		height: 100%;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		align-items: start;
+		padding: 0 10px 33px 18px;
+		row-gap: 13px;
+		height: 482px;
+		z-index: 1;
+
+		@include mobile {
+			padding-inline: 14px 13px;
+		}
+	}
+
+	&__button {
+		width: 153px;
+	}
+}

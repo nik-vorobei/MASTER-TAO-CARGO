@@ -8,6 +8,7 @@
 		overflow-x: scroll;
 		scroll-snap-type: x mandatory;
 		scrollbar-width: none;
+		column-gap: 20px;
 	}
 
 	&__item {
@@ -71,7 +72,6 @@
 		object-fit: cover;
 
 		@include mobile-above {
-			box-shadow: var(--shadow);
 			border-radius: var(--border-radius-medium);
 		}
 	}

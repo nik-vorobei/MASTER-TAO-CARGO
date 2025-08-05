@@ -1,0 +1,80 @@
+.about-company {
+	&__body {
+		display: flex;
+		margin-top: 70px;
+
+		@include tablet-above {
+			position: relative;
+		}
+
+		@include tablet {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 40px;
+			margin-top: 50px;
+		}
+	}
+
+	&__description {
+		width: 555px;
+		line-height: 1.7;
+
+		@include mobile {
+			width: 100%;
+			line-height: 1.5;
+		}
+	}
+
+	&__image-wrapper {
+		@include square(530px);
+
+		position: absolute;
+		top: -49%;
+		border-radius: 50%;
+		background-color: var(--color-dark-alt);
+
+		@include desktop {
+			@include square(470px);
+		}
+
+		@include tablet-big-above {
+			left: 52%;
+		}
+
+		@include tablet-big {
+			@include square(400px);
+			right: 3%;
+			top: -35%;
+		}
+
+		@include tablet {
+			position: relative;
+			right: 0;
+		}
+
+		@include mobile-s {
+			@include square(277px);
+		}
+
+		img {
+			top: -6%;
+			left: -15%;
+			height: auto;
+			max-width: none;
+			max-height: none;
+			position: absolute;
+
+			@include desktop {
+				width: 580px;
+			}
+
+			@include tablet-big {
+				width: 490px;
+			}
+
+			@include mobile-s {
+				width: 340px;
+			}
+		}
+	}
+}

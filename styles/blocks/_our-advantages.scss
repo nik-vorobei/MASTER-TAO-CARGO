@@ -11,6 +11,10 @@
 		column-gap: 30px;
 		margin-top: 70px;
 
+		@include tablet {
+			margin-top: 50px;
+		}
+
 		@include mobile-s-above {
 			justify-content: center;
 			flex-wrap: wrap;

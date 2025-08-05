@@ -34,7 +34,7 @@
 	}
 
 	&__header {
-		@include mobile-s {
+		@include tablet-big {
 			display: flex;
 			justify-content: center;
 		}
@@ -43,6 +43,14 @@
 	&__title {
 		position: relative;
 		text-transform: uppercase;
+
+		&::after {
+			position: absolute;
+
+			content: '';
+			width: 85px;
+			height: 2px;
+		}
 
 		@include mobile-s {
 			text-align: center;
@@ -54,12 +62,7 @@
 			justify-content: center;
 
 			&::after {
-				position: absolute;
-
-				content: '';
-				width: 85px;
-				height: 2px;
-				bottom: -36%;
+				bottom: -19px;
 				left: 50%;
 				translate: -50% 0;
 			}
@@ -77,11 +80,6 @@
 			}
 
 			&::after {
-				position: absolute;
-
-				content: '';
-				width: 85px;
-				height: 2px;
 				top: 70%;
 
 				@include mobile-s-above {
@@ -90,6 +88,22 @@
 
 				@include mobile-s {
 					top: 115%;
+					left: 50%;
+					translate: -50%;
+				}
+			}
+		}
+
+		&--left {
+			@include tablet-big-above {
+				margin-top: 45px;
+			}
+
+			&::after {
+				bottom: -19px;
+				left: 0;
+
+				@include tablet-big {
 					left: 50%;
 					translate: -50%;
 				}

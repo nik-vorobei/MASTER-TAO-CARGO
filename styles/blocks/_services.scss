@@ -14,10 +14,11 @@
 		overflow-x: scroll;
 		scroll-snap-type: x mandatory;
 		scrollbar-width: none;
-		margin-top: 56px;
+		margin-top: 70px;
 
 		@include tablet {
 			width: 756px;
+			margin-top: 50px;
 		}
 
 		@include mobile {

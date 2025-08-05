@@ -600,7 +600,7 @@ h4,
     padding-block: 50px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 1140px) {
   .section__header {
     display: flex;
     justify-content: center;
@@ -609,6 +609,12 @@ h4,
 .section__title {
   position: relative;
   text-transform: uppercase;
+}
+.section__title::after {
+  position: absolute;
+  content: "";
+  width: 85px;
+  height: 2px;
 }
 @media (max-width: 480px) {
   .section__title {
@@ -621,11 +627,7 @@ h4,
   justify-content: center;
 }
 .section__title--base::after {
-  position: absolute;
-  content: "";
-  width: 85px;
-  height: 2px;
-  bottom: -36%;
+  bottom: -19px;
   left: 50%;
   translate: -50% 0;
 }
@@ -643,10 +645,6 @@ h4,
   }
 }
 .section__title--width::after {
-  position: absolute;
-  content: "";
-  width: 85px;
-  height: 2px;
   top: 70%;
 }
 @media (min-width: 481px) {
@@ -657,6 +655,21 @@ h4,
 @media (max-width: 480px) {
   .section__title--width::after {
     top: 115%;
+    left: 50%;
+    translate: -50%;
+  }
+}
+@media (min-width: 1141px) {
+  .section__title--left {
+    margin-top: 45px;
+  }
+}
+.section__title--left::after {
+  bottom: -19px;
+  left: 0;
+}
+@media (max-width: 1140px) {
+  .section__title--left::after {
     left: 50%;
     translate: -50%;
   }
@@ -801,7 +814,14 @@ h4,
 .calculation {
   position: relative;
 }
+@media (max-width: 1140px) {
+  .calculation {
+    display: flex;
+    justify-content: center;
+  }
+}
 .calculation__body {
+  position: relative;
   padding: 70px 50px 40px;
   background-color: var(--color-dark-alt);
   width: 626px;
@@ -823,6 +843,11 @@ h4,
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .calculation__step-wrapper {
+    top: -3.5%;
+  }
 }
 .calculation__step {
   width: 60px;
@@ -944,6 +969,11 @@ h4,
        column-gap: 30px;
   margin-top: 70px;
 }
+@media (max-width: 1023px) {
+  .our-advantages__body {
+    margin-top: 50px;
+  }
+}
 @media (min-width: 481px) {
   .our-advantages__body {
     justify-content: center;
@@ -1003,11 +1033,12 @@ h4,
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  margin-top: 56px;
+  margin-top: 70px;
 }
 @media (max-width: 1023px) {
   .variants__list {
     width: 756px;
+    margin-top: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -1146,11 +1177,12 @@ h4,
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  margin-top: 56px;
+  margin-top: 70px;
 }
 @media (max-width: 1023px) {
   .services__list {
     width: 756px;
+    margin-top: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -1247,6 +1279,96 @@ h4,
 }
 .services-card__button {
   width: 153px;
+}
+
+.about-company__body {
+  display: flex;
+  margin-top: 70px;
+}
+@media (min-width: 1024px) {
+  .about-company__body {
+    position: relative;
+  }
+}
+@media (max-width: 1023px) {
+  .about-company__body {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    margin-top: 50px;
+  }
+}
+.about-company__description {
+  width: 555px;
+  line-height: 1.7;
+}
+@media (max-width: 767px) {
+  .about-company__description {
+    width: 100%;
+    line-height: 1.5;
+  }
+}
+.about-company__image-wrapper {
+  width: 530px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -49%;
+  border-radius: 50%;
+  background-color: var(--color-dark-alt);
+}
+@media (max-width: 1280px) {
+  .about-company__image-wrapper {
+    width: 470px;
+    aspect-ratio: 1;
+  }
+}
+@media (min-width: 1141px) {
+  .about-company__image-wrapper {
+    left: 52%;
+  }
+}
+@media (max-width: 1140px) {
+  .about-company__image-wrapper {
+    width: 400px;
+    aspect-ratio: 1;
+    right: 3%;
+    top: -35%;
+  }
+}
+@media (max-width: 1023px) {
+  .about-company__image-wrapper {
+    position: relative;
+    right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .about-company__image-wrapper {
+    width: 277px;
+    aspect-ratio: 1;
+  }
+}
+.about-company__image-wrapper img {
+  top: -6%;
+  left: -15%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  position: absolute;
+}
+@media (max-width: 1280px) {
+  .about-company__image-wrapper img {
+    width: 580px;
+  }
+}
+@media (max-width: 1140px) {
+  .about-company__image-wrapper img {
+    width: 490px;
+  }
+}
+@media (max-width: 480px) {
+  .about-company__image-wrapper img {
+    width: 340px;
+  }
 }
 
 .pagination__list {

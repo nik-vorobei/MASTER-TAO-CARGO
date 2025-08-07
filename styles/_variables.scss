@@ -26,8 +26,18 @@
 	--container-width: 1140px;
 	--container-padding-x: 20px;
 
+	--section-margin-x: 50px;
+
 	--input-height: 56px;
 	--button-height: 50px;
 
 	--transition-duration: 0.2s;
+
+	@include desktop-big {
+		--section-margin-x: 25px;
+	}
+
+	@include desktop {
+		--section-margin-x: 0;
+	}
 }

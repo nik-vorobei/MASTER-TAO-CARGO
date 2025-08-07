@@ -1,13 +1,5 @@
 .section {
-	margin-inline: 50px;
-
-	@include desktop-big {
-		margin-inline: 25px;
-	}
-
-	@include desktop {
-		margin-inline: 0;
-	}
+	margin-inline: var(--section-margin-x);
 
 	&--bg {
 		background-color: var(--color-dark-alt);
@@ -38,11 +30,27 @@
 			display: flex;
 			justify-content: center;
 		}
+
+		&--alt {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: 8px;
+
+			@include tablet-big {
+				row-gap: 6px;
+			}
+		}
 	}
 
 	&__title {
 		position: relative;
 		text-transform: uppercase;
+
+		@include mobile-s {
+			text-align: center;
+			padding-inline: 20px;
+		}
 
 		&::after {
 			position: absolute;
@@ -52,17 +60,23 @@
 			height: 2px;
 		}
 
-		@include mobile-s {
-			text-align: center;
-			padding-inline: 20px;
-		}
-
 		&--base {
 			display: flex;
 			justify-content: center;
 
 			&::after {
 				bottom: -19px;
+				left: 50%;
+				translate: -50% 0;
+			}
+		}
+
+		&--alt {
+			display: flex;
+			justify-content: center;
+
+			&::after {
+				bottom: -59px;
 				left: 50%;
 				translate: -50% 0;
 			}

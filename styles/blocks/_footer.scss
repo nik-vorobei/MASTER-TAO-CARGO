@@ -1,0 +1,110 @@
+.footer {
+	&__inner {
+		position: relative;
+		display: flex;
+		column-gap: 90px;
+		margin-top: 100px;
+		padding-bottom: 60px;
+
+		@include tablet-big {
+			padding-bottom: 44px;
+			column-gap: 60px;
+		}
+
+		@include tablet {
+			justify-content: center;
+		}
+
+		&::after {
+			position: absolute;
+
+			content: '';
+			width: 100%;
+			height: 2px;
+			background-color: var(--color-orange);
+			top: -32px;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		width: 263px;
+
+		@include mobile {
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	&__contacts {
+		margin-block: 24px 19px;
+		line-height: 1.6;
+
+		p {
+			margin-bottom: 0;
+
+			&:nth-child(2) {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__soc1als {
+		display: flex;
+		column-gap: 8px;
+
+		&-link {
+			@include square(34px);
+		}
+	}
+
+	&__menu {
+		&-list {
+			display: flex;
+			column-gap: 72px;
+
+			@include tablet-big {
+				column-gap: 50px;
+			}
+
+			@include tablet {
+				flex-wrap: wrap;
+				width: 430px;
+				justify-content: end;
+			}
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			width: max-content;
+
+			@include tablet {
+				margin-bottom: 10px;
+			}
+
+			&:nth-child(2) {
+				margin-left: 18px;
+				@include tablet-big {
+					margin-left: 0;
+				}
+			}
+		}
+
+		&-title {
+			margin-bottom: 14px;
+		}
+
+		&-link {
+			color: var(--color-blue-alt);
+			text-decoration: underline;
+			line-height: 1.6;
+
+			&:not(:last-child) {
+				margin-bottom: 6px;
+			}
+		}
+	}
+}

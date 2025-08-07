@@ -24,6 +24,10 @@
 		@include mobile {
 			width: 335px;
 		}
+
+		@include mobile-mini {
+			width: 280px;
+		}
 	}
 
 	&__item {
@@ -32,6 +36,10 @@
 
 		@include mobile {
 			min-width: 335px;
+		}
+
+		@include mobile-mini {
+			min-width: 280px;
 		}
 	}
 

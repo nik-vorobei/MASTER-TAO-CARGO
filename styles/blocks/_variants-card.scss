@@ -53,6 +53,10 @@
 	&__button-wrapper {
 		display: flex;
 		column-gap: 14px;
+
+		@include mobile-mini {
+			column-gap: 3px;
+		}
 	}
 
 	&__button {
@@ -60,6 +64,10 @@
 
 		@include mobile {
 			width: 138px;
+		}
+
+		@include mobile-mini {
+			width: 136px;
 		}
 	}
 }

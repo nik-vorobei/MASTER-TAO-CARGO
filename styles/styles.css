@@ -859,6 +859,11 @@ h4,
     width: 100%;
   }
 }
+@media (max-width: 320px) {
+  .calculation__body {
+    padding: 35px 12px 25px;
+  }
+}
 .calculation__step-wrapper {
   position: absolute;
   display: flex;
@@ -874,6 +879,19 @@ h4,
     top: -3.5%;
   }
 }
+@media (max-width: 480px) {
+  .calculation__step-wrapper {
+    left: 50%;
+    translate: -50%;
+  }
+}
+@media (max-width: 320px) {
+  .calculation__step-wrapper {
+    top: -3%;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
 .calculation__step {
   width: 60px;
   aspect-ratio: 1;
@@ -884,6 +902,12 @@ h4,
   background-color: var(--color-dark);
   border: 2px solid var(--color-dark-alt);
   border-radius: var(--border-radius-big);
+}
+@media (max-width: 320px) {
+  .calculation__step {
+    width: 50px;
+    aspect-ratio: 1;
+  }
 }
 .calculation__step.is-current {
   color: var(--color-light);
@@ -1071,6 +1095,11 @@ h4,
     width: 335px;
   }
 }
+@media (max-width: 320px) {
+  .variants__list {
+    width: 280px;
+  }
+}
 .variants__item {
   min-width: 360px;
   scroll-snap-align: start;
@@ -1078,6 +1107,11 @@ h4,
 @media (max-width: 767px) {
   .variants__item {
     min-width: 335px;
+  }
+}
+@media (max-width: 320px) {
+  .variants__item {
+    min-width: 280px;
   }
 }
 .variants__button-arrow {
@@ -1177,12 +1211,23 @@ h4,
   -moz-column-gap: 14px;
        column-gap: 14px;
 }
+@media (max-width: 320px) {
+  .variants-card__button-wrapper {
+    -moz-column-gap: 3px;
+         column-gap: 3px;
+  }
+}
 .variants-card__button {
   width: 153px;
 }
 @media (max-width: 767px) {
   .variants-card__button {
     width: 138px;
+  }
+}
+@media (max-width: 320px) {
+  .variants-card__button {
+    width: 136px;
   }
 }
 
@@ -1215,6 +1260,11 @@ h4,
     width: 335px;
   }
 }
+@media (max-width: 320px) {
+  .services__list {
+    width: 280px;
+  }
+}
 .services__item {
   min-width: 360px;
   scroll-snap-align: start;
@@ -1222,6 +1272,11 @@ h4,
 @media (max-width: 767px) {
   .services__item {
     min-width: 335px;
+  }
+}
+@media (max-width: 320px) {
+  .services__item {
+    min-width: 280px;
   }
 }
 .services__button-arrow {
@@ -1587,4 +1642,112 @@ h4,
   .register__button {
     width: 100%;
   }
+}
+
+.footer__inner {
+  position: relative;
+  display: flex;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+  margin-top: 100px;
+  padding-bottom: 60px;
+}
+@media (max-width: 1140px) {
+  .footer__inner {
+    padding-bottom: 44px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .footer__inner {
+    justify-content: center;
+  }
+}
+.footer__inner::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-orange);
+  top: -32px;
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  width: 263px;
+}
+@media (max-width: 767px) {
+  .footer__body {
+    align-items: center;
+    text-align: center;
+  }
+}
+.footer__contacts {
+  margin-block: 24px 19px;
+  line-height: 1.6;
+}
+.footer__contacts p {
+  margin-bottom: 0;
+}
+.footer__contacts p:nth-child(2) {
+  text-decoration: underline;
+}
+.footer__soc1als {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.footer__soc1als-link {
+  width: 34px;
+  aspect-ratio: 1;
+}
+.footer__menu-list {
+  display: flex;
+  -moz-column-gap: 72px;
+       column-gap: 72px;
+}
+@media (max-width: 1140px) {
+  .footer__menu-list {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+}
+@media (max-width: 1023px) {
+  .footer__menu-list {
+    flex-wrap: wrap;
+    width: 430px;
+    justify-content: end;
+  }
+}
+.footer__menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (max-width: 1023px) {
+  .footer__menu-item {
+    margin-bottom: 10px;
+  }
+}
+.footer__menu-item:nth-child(2) {
+  margin-left: 18px;
+}
+@media (max-width: 1140px) {
+  .footer__menu-item:nth-child(2) {
+    margin-left: 0;
+  }
+}
+.footer__menu-title {
+  margin-bottom: 14px;
+}
+.footer__menu-link {
+  color: var(--color-blue-alt);
+  text-decoration: underline;
+  line-height: 1.6;
+}
+.footer__menu-link:not(:last-child) {
+  margin-bottom: 6px;
 }/*# sourceMappingURL=styles.css.map */

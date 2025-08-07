@@ -18,6 +18,10 @@
 			padding: 52px 30px 34px;
 			width: 100%;
 		}
+
+		@include mobile-mini {
+			padding: 35px 12px 25px;
+		}
 	}
 
 	&__step-wrapper {
@@ -32,6 +36,16 @@
 		@include mobile {
 			top: -3.5%;
 		}
+
+		@include mobile-s {
+			left: 50%;
+			translate: -50%;
+		}
+
+		@include mobile-mini {
+			top: -3%;
+			column-gap: 30px;
+		}
 	}
 
 	&__step {
@@ -42,6 +56,10 @@
 		background-color: var(--color-dark);
 		border: 2px solid var(--color-dark-alt);
 		border-radius: var(--border-radius-big);
+
+		@include mobile-mini {
+			@include square(50px);
+		}
 
 		&.is-current {
 			color: var(--color-light);
